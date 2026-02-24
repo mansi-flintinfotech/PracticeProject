@@ -1,0 +1,240 @@
+.layout {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+}
+
+.main {
+  flex: 1;
+  background: #f4f6fa;
+  padding: 20px;
+}
+
+/* Card Container */
+.filter-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+}
+
+/* Grid Layout */
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+/* Input Styling */
+.custom-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  color: #adb5bd;
+  font-size: 14px;
+  outline: none;
+  background-color: #fff;
+}
+
+/* Actions Row (Bottom Right) */
+.filter-actions {
+  grid-column: 2 / span 2; /* Occupies the rest of the row */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* Button Styling */
+.btn-search, .btn-clear {
+  background-color: #1a1a4b; /* Exact Dark Blue */
+  color: white;
+  padding: 8px 24px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-search:hover, .btn-clear:hover {
+  background-color: #2a2a6b;
+}
+
+/* Export Dropdown Styling */
+.export-dropdown {
+  border: 1px solid #ced4da;
+  padding: 6px 15px;
+  border-radius: 6px;
+  color: #adb5bd;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.arrow-down {
+  border: solid #adb5bd;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+}
+
+
+
+
+/* Main Layout structure */
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  overflow-x: hidden;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+/* Page Title Section */
+.page-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.page-header-row h2 {
+  font-size: 24px;
+  color: #333;
+  margin: 0;
+}
+
+.year-display {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Filter Card Responsive Grid */
+.filter-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  align-items: flex-end;
+}
+
+/* Responsive Buttons container */
+.filter-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  grid-column: 1 / -1; /* Desktop par buttons pure row mein failne ke liye */
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.custom-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+  
+  .main {
+    padding: 15px;
+  }
+
+  .filter-grid {
+    grid-template-columns: 1fr; /* Mobile par har input full width hoga */
+  }
+
+  .filter-actions {
+    justify-content: center; /* Mobile par buttons center honge */
+    width: 100%;
+  }
+  
+  .filter-actions button, .export-dropdown {
+    flex: 1; /* Buttons mobile par barabar width ke honge */
+    text-align: center;
+  }
+}
+
+/* Filter Card Container */
+.filter-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+}
+
+/* Desktop Grid: 3 Columns */
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 15px;
+}
+
+/* Vehicle No ko 2nd row ki 1st column mein lane ke liye */
+.filter-input-group:nth-child(4) {
+  grid-column: 1; 
+}
+
+/* Buttons ko right side align karne ke liye */
+.filter-actions {
+  grid-column: 2 / span 2; /* Yeh 2nd aur 3rd column occupy karega */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Mobile Responsiveness (768px se niche) */
+@media (max-width: 768px) {
+  .filter-grid {
+    grid-template-columns: 1fr; /* Sab kuch ek ke niche ek */
+  }
+
+  .filter-input-group:nth-child(4) {
+    grid-column: auto; /* Mobile par reset */
+  }
+
+  .filter-actions {
+    grid-column: auto; /* Mobile par reset */
+    flex-direction: column; /* Buttons ek ke niche ek */
+    width: 100%;
+  }
+
+  .btn-search, .btn-clear, .export-dropdown {
+    width: 100%;
+    justify-content: center;
+  }
+}
+

@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  /* vertically center items */
+  margin-bottom: 20px;
+  flex-wrap: wrap;      /* allow wrapping on smaller screens */
+}
+
+/* Heading styling */
+.header h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* Year styling */
+.header .year {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;   /* stack items vertically */
+    align-items: flex-start;  /* left-align items */
+    gap: 8px;                 /* spacing between stacked items */
+  }
+
+  .header h3 {
+    font-size: 1.2rem;
+  }
+
+  .header .year {
+    font-size: 0.9rem;
+  }
+}

@@ -300,7 +300,7 @@ if (toDate) {
   // ================= CLEAR =================
   const handleClear = () => {
   setSelectedVendor(null);
-  setSelectedVehicle(null);   // 🔥 important
+  setSelectedVehicle(null);   // 🔥 important hhhhh
   setFromDate("");
   setToDate("");
   fetchMemoData();

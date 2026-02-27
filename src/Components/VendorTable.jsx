@@ -11,8 +11,8 @@ export default function VendorTable({ data }) {
             <th>LR No</th>
             <th>Vendor Entry Date</th>
             <th>Vendor Name</th>
-            <th>From Area</th>
-            <th>To Area</th>
+            <th>fromArea</th>
+            <th>toArea</th>
             <th>Freight</th>
             <th>Add</th>
             <th>Less</th>
@@ -43,7 +43,7 @@ export default function VendorTable({ data }) {
             <tr>
               <td colSpan="12" className="no-data-cell">
                 <div className="no-data-content">
-                  <img src="/no-data-icon.png" alt="No data" /> 
+                  <img src="https://www.shutterstock.com/image-vector/no-data-available-icon-vector-260nw-1645941262.jpg" alt="No data" /> 
                   
                 </div>
               </td>

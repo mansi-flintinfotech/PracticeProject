@@ -257,3 +257,8 @@
   color: #adb5bd;
 }
 
+.no-data-content img {
+  width: 80px;     /* apne hisaab se size change kar sakti ho */
+  height: auto;
+  opacity: 0.8;     /* optional – thoda light look ke liye */
+}
